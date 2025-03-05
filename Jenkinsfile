@@ -16,14 +16,14 @@ pipeline {
         }
         stage("Copy *.war file to ansible") {
             steps {
-                sh 'mv target/instagram.war .'
+                sh 'mv target/reels.war .'
                 sshPublisher(
                     continueOnError: false, 
                     failOnError: true,
                     publishers: [
                         sshPublisherDesc(
                             configName: "marcos",
-                            transfers: [sshTransfer(sourceFiles: 'instagram.war')],
+                            transfers: [sshTransfer(sourceFiles: 'reels.war')],
                             verbose: true
                         )
                     ]
