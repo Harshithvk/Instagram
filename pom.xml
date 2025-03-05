@@ -52,6 +52,7 @@
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.4.0</version>
+          <finalName>instagram</finalName>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
